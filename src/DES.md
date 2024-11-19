@@ -1,4 +1,4 @@
-> # Data Encryption Standard (DES)
+> # 数据加密标准 (DES)
 
 ## DES 设计参数
 
@@ -57,9 +57,9 @@
      L_i =& R_{i-1} \\
      R_i =& L_{i-1} \oplus F(K_i, R_{i-1})
      $$
-   
+
    最后得到 $C = (R_{16}, L_{16})$
-   
+
 3. [最终置换（FP 或 IP<sup>-1</sup>）]([DES补充材料 - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/DES补充材料#最终置换_(IP-1))
 
 
