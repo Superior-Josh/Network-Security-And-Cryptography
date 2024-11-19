@@ -17,7 +17,7 @@ AES是一个替换置换网络（不是Feistel网络）。
 
 ## AES 操作
 
-* 字节代换（S盒）：对每个字节进行独立操作。这就给出了 AES 的非线性。
+* 字节代换（S盒）：对每个字节进行独立操作。这就给出了 AES 的非线性和混淆。
 
 
 * 字节排列：行移位
@@ -49,7 +49,7 @@ AES 是一种面向字节的加密算法。被各轮操作处理的 128 位“�
 
 <img src="img\AES-SubBytes.svg.png" alt="AES-SubBytes.svg" style="zoom: 25%;" />
 
-矩阵中的各字节透过一个8位的[S-box](https://zh.wikipedia.org/wiki/S-box)进行转换。这个步骤提供了非线性的变换能力。
+矩阵中的各字节透过一个8位的[S-box](https://en.wikipedia.org/wiki/Rijndael_S-box#Forward_S-box)进行转换。这个步骤提供了非线性的变换能力。
 
 ### 行移位
 
@@ -87,4 +87,6 @@ end
 
 * 轮密钥$K_i = W_{4i}, W_{4i+1}, W_{4i+2}, W_{4i+3}$
 
-* 常数 $RC_i$ ：
+* 常数 $RC_i=0x\space rc_i000000$
+
+​	$rc_i=x^{i-1}\bmod x^8 + x^4 + x^3 + x + 1$
